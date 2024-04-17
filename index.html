@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Pages</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            font-size: 100px;
+            opacity: 0;
+            animation: fadeIn 0.5s forwards; 
+        }
+        .button-container {
+            display: inline-block;
+            opacity: 0; 
+            transition: opacity 0.5s;
+            animation: fadeIn 0.5s forwards, slideIn 1s forwards; 
+            margin-left: 10px; 
+        }
+        .button-container.show {
+            opacity: 1; 
+        }
+        .button-container.box1 {
+            animation-delay: 1s; 
+        }
+        .button-container.box2{
+            animation-delay: 1.5s;
+        }
+        .button-container.box3 {
+            animation-delay: 2s;
+        }
+        .button-container.box4 {
+            animation-delay: 2.5s;
+        }
+        .button-container.box5 {
+            animation-delay: 3s;
+        }
+        .button-container > div {
+            text-align: center;
+        }
+        button {
+            border: none;
+            cursor: pointer;
+            background-size: contain;
+            background-repeat: no-repeat;
+            transition: box-shadow 0.3s;
+        }
+        button:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .Entertainment-Apps {
+            background-image: url('logos/onlineentertainment.png');
+            width: 120px;
+            height: 120px;
+            margin: 80px;
+        }
+        .Music-Apps {
+            background-image: url('logos/onlinemusic.png');
+            width: 140px;
+            height: 140px;
+            margin: 40px;
+        }
+        .Transportation-Apps {
+            background-image: url('logos/taxi.png');
+            width: 130px;
+            height: 75px;
+            margin: 50px;
+        }
+        .Shopping-Apps {
+            background-image: url('logos/onlineshopping.png');
+            width: 130px;
+            height: 130px;
+            margin: 40px;
+        }
+        .Online-Food-Apps {
+            background-image: url('logos/onlinefood1.png');
+            width: 130px;
+            height: 130px;
+            margin: 40px;
+        }
+        .text p {
+            margin: 0;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(50px);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Contents</h1>
+    <div class="button-container box1">
+        <div>
+            <button class="Entertainment-Apps" onclick="window.location.href='page1.html';"></button>
+            <div class="text"><p>Entertainment Apps</p></div>
+        </div>
+    </div>
+
+    <div class="button-container box2">
+        <div>
+            <button class="Music-Apps" onclick="window.location.href='page2.html';"></button>
+            <div class="text"><p>Music Apps</p></div>
+        </div>
+    </div>
+
+    <div class="button-container box3">
+        <div>
+            <button class="Transportation-Apps" onclick="window.location.href='page3.html';"></button>
+            <div class="text"><p>Transportation Apps</p></div>
+        </div>
+    </div>
+
+    <div class="button-container box4">
+        <div>
+            <button class="Shopping-Apps" onclick="window.location.href='page4.html';"></button>
+            <div class="text"><p>Shopping Apps</p></div>
+        </div>
+    </div>
+
+    <div class="button-container box5">
+        <div>
+            <button class="Online-Food-Apps" onclick="window.location.href='page5.html';"></button>
+            <div class="text"><p>Online Food Apps</p></div>
+        </div>
+    </div>
+
+    <nav style="position: fixed; bottom: 0; width: 100%; background-color: pink; padding: 10px 0;">
+        <ul style="list-style-type: none; text-align: center; margin-right: 0; padding: 0;">
+            <li style="display: inline;"><a href="index.html">Home</a></li>
+            <li style="display: inline;"><a href="page1.html">Page 1</a></li>
+            <li style="display: inline;"><a href="page2.html">Page 2</a></li>
+            <li style="display: inline;"><a href="page3.html">Page 3</a></li>
+            <li style="display: inline;"><a href="page4.html">Page 4</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
